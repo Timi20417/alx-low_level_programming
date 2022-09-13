@@ -2,30 +2,36 @@
 #include <time.h>
 #include <stdlib.h>
 /**
- *main - Entry point
+ * main - Entry point
+ * print last digit of a random number
  *
- * print negative or positive numbers
- * Return: Always 0 (Success)
+ * Return: Aways 0 (Success)
  */
 
 int main(void)
 {
 	int n;
 
+	int y;
+
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
+	y = n % 10;
+	printf("Last digit of %d is %d ", n, y);
 
-	if (n > 0)
+	if (y > 5)
 	{
-	printf("%d is positive\n", n);
+	printf("and is greater than 5");
 	}
-	else if (n == 0)
+	if (y == 0)
 	{
-		printf("%d is zero\n", n);
+		printf("and is 0");
 	}
-	else
+	else if (y < 6 && y != 0)
 	{
-		printf("%d is negative\n", n);
+		printf("and is less than 6 and not 0");
 	}
+	printf("\n");
 	return (0);
 }
+
