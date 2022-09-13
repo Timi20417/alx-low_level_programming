@@ -1,32 +1,18 @@
 #include <stdio.h>
+#include <stdlib.h>
 /**
  * main - Entry point
- * print combination of numbers
- * Return: Always 0 (success)
+ * print alphabet in lower case
+ * Return: 0 (Success)
  */
 int main(void)
 {
-int x;
+	char x;
 
-int y;
-
-for (x = 48; x <= 57; x++)
-{
-for (y = 49; y <= 57; y++)
-{
-	if (y > x)
+	for (x = 97; x <= 122; x++)
 	{
 		putchar(x);
-		putchar(y);
-
-if (x != 56 || y != 57)
-{
-putchar(44);
-putchar(32);
-}
-}
-}
-}
-putchar(10);
-return (0);
+	}
+	putchar('\n');
+	return (0);
 }
