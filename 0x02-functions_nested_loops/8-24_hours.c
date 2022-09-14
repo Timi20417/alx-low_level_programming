@@ -1,25 +1,29 @@
-#include "holberton.h"
+#include "main.h"
 /**
- * jack_bauer - function that prints every minute of the day, 24 hour clock
- * h = hour, m = minutes
- * / 10 allows second digit to rotate
- * for loop breaks before passing 24:00
- * Return: 24 hour clock line by line
+ * jack_bauer - Prints the minutes of a day
+ * Return: no return
  */
 void jack_bauer(void)
 {
-	int h, m;
-
-	for (h = 0; h < 24; h++)
-	{
-		for (m = 0; m < 60; m++)
-		{
-			_putchar((h / 10) + '0');
-			_putchar((h % 10) + '0');
-			_putchar(':');
-			_putchar((m / 10) + '0');
-			_putchar((m % 10) + '0');
-			_putchar('\n');
-		}
-	}
+int a, b, c, d;
+for (a = 48; a <= 50; a++)
+{
+for (b = 48; b <= 57; b++)
+{
+for (c = 48; c <= 53; c++)
+{
+for (d = 48; d <= 57; d++)
+{
+if (a >= 50 && b >= 52)
+break;
+_putchar(a);
+_putchar(b);
+_putchar(58);
+_putchar(c);
+_putchar(d);
+_putchar('\n');
+}
+}
+}
+}
 }
